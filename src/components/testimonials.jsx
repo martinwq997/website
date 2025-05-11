@@ -14,6 +14,7 @@ import useMeasure from 'react-use-measure'
 import { Container } from './container'
 import { Link } from './link'
 import { Heading, Subheading } from './text'
+import Image from 'next/image'
 
 const testimonials = [
   {
@@ -109,7 +110,7 @@ function TestimonialCard({
       {...props}
       className="relative flex aspect-9/16 w-72 shrink-0 snap-start scroll-ml-(--scroll-padding) flex-col justify-end overflow-hidden rounded-3xl sm:aspect-3/4 sm:w-96"
     >
-      <img
+      <Image
         alt=""
         src={img}
         className="absolute inset-x-0 top-0 aspect-square w-full object-cover"

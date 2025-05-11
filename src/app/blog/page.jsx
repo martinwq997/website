@@ -23,6 +23,7 @@ import {
 import { clsx } from 'clsx'
 import dayjs from 'dayjs'
 import { notFound } from 'next/navigation'
+import Image from 'next/image'
 
 export const metadata = {
   title: 'Blog',
@@ -50,7 +51,7 @@ async function FeaturedPosts() {
               className="relative flex flex-col rounded-3xl bg-white p-2 shadow-md ring-1 shadow-black/5 ring-black/5"
             >
               {post.mainImage && (
-                <img
+                <Image
                   alt={post.mainImage.alt || ''}
                   src={image(post.mainImage).size(1170, 780).url()}
                   className="aspect-3/2 w-full rounded-2xl object-cover"
@@ -72,7 +73,7 @@ async function FeaturedPosts() {
                 {post.author && (
                   <div className="mt-6 flex items-center gap-3">
                     {post.author.image && (
-                      <img
+                      <Image
                         alt=""
                         src={image(post.author.image).size(64, 64).url()}
                         className="aspect-square size-6 rounded-full object-cover"
@@ -172,10 +173,12 @@ async function Posts({ page, category }) {
             {post.author && (
               <div className="mt-2.5 flex items-center gap-3">
                 {post.author.image && (
-                  <img
+                  <Image
                     alt=""
                     src={image(post.author.image).width(64).height(64).url()}
                     className="aspect-square size-6 rounded-full object-cover"
+                    width={64}
+                    height={64}
                   />
                 )}
                 <div className="text-sm/5 text-gray-700">
