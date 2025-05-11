@@ -11,6 +11,7 @@ import { ChevronLeftIcon } from '@heroicons/react/16/solid'
 import dayjs from 'dayjs'
 import { PortableText } from 'next-sanity'
 import { notFound } from 'next/navigation'
+import Image from 'next/image'
 
 export async function generateMetadata({ params }) {
   let post = await getPost(params.slug)
@@ -37,10 +38,12 @@ export default async function BlogPost({ params }) {
             {post.author && (
               <div className="flex items-center gap-3">
                 {post.author.image && (
-                  <img
+                  <Image
                     alt=""
                     src={image(post.author.image).size(64, 64).url()}
                     className="aspect-square size-6 rounded-full object-cover"
+                    width={64}
+                    height={64}
                   />
                 )}
                 <div className="text-sm/5 text-gray-700">
@@ -65,10 +68,12 @@ export default async function BlogPost({ params }) {
           <div className="text-gray-700">
             <div className="max-w-2xl xl:mx-auto">
               {post.mainImage && (
-                <img
+                <Image        
                   alt={post.mainImage.alt || ''}
                   src={image(post.mainImage).size(2016, 1344).url()}
                   className="mb-10 aspect-3/2 w-full rounded-2xl object-cover shadow-xl"
+                  width={2016}
+                  height={1344}
                 />
               )}
               {post.body && (
@@ -99,10 +104,12 @@ export default async function BlogPost({ params }) {
                     },
                     types: {
                       image: ({ value }) => (
-                        <img
+                        <Image
                           alt={value.alt || ''}
                           src={image(value).width(2000).url()}
                           className="w-full rounded-2xl"
+                          width={2000}
+                          height={2000}
                         />
                       ),
                       separator: ({ value }) => {

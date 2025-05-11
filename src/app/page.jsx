@@ -46,7 +46,7 @@ function Hero() {
             your customers.
           </p>
           <div className="mt-12 flex flex-col gap-x-6 gap-y-4 sm:flex-row">
-            <Button href="#">Get started</Button>
+            <Button href="/docs">Get started</Button>
             <Button variant="secondary" href="/pricing">
               See pricing
             </Button>
@@ -97,7 +97,7 @@ function BentoSection() {
         <BentoCard
           eyebrow="Analysis"
           title="Undercut your competitors"
-          description="With our advanced data mining, you’ll know which companies your leads are talking to and exactly how much they’re being charged."
+          description="With our advanced data mining, you'll know which companies your leads are talking to and exactly how much they're being charged."
           graphic={
             <div className="absolute inset-0 bg-[url(/screenshots/competitors.png)] bg-[size:1100px_650px] bg-[left_-38px_top_-73px] bg-no-repeat" />
           }
@@ -107,7 +107,7 @@ function BentoSection() {
         <BentoCard
           eyebrow="Speed"
           title="Built for power users"
-          description="It’s never been faster to cold email your entire contact list using our streamlined keyboard shortcuts."
+          description="It's never been faster to cold email your entire contact list using our streamlined keyboard shortcuts."
           graphic={
             <div className="flex size-full pt-10 pl-10">
               <Keyboard highlighted={['LeftCommand', 'LeftShift', 'D']} />

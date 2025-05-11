@@ -1,4 +1,6 @@
 import '@/styles/tailwind.css'
+import { RootProvider } from 'fumadocs-ui/provider';
+import type { ReactNode } from 'react';
 
 export const metadata = {
   title: {
@@ -7,9 +9,9 @@ export const metadata = {
   },
 }
 
-export default function RootLayout({ children }) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
         <link
           rel="stylesheet"
@@ -22,7 +24,16 @@ export default function RootLayout({ children }) {
           href="/blog/feed.xml"
         />
       </head>
-      <body className="text-gray-950 antialiased">{children}</body>
+      <body
+        className="text-gray-950 antialiased"
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          minHeight: '100vh',
+        }}
+      >
+        <RootProvider>{children}</RootProvider>
+      </body>
     </html>
-  )
+  );
 }
