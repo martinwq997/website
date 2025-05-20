@@ -1,6 +1,6 @@
 import { clsx } from 'clsx'
-import { Mark } from './logo'
-import Image from 'next/image'
+//import { Mark } from './logo'
+//import Image from 'next/image'
 
 function Row({ children }) {
   return (
@@ -22,7 +22,7 @@ function Logo({ label, src, className }) {
         '[--move-x-from:-100%] [--move-x-to:calc(100%+100cqw)] [animation-iteration-count:infinite] [animation-name:move-x] [animation-play-state:paused] [animation-timing-function:linear] group-hover:[animation-play-state:running]',
       )}
     >
-      <Image alt="" src={src} width={16} height={16} className="size-4" />
+      <img alt="" src={src} width={16} height={16} className="size-4" />
       <span className="text-sm/6 font-medium text-white">{label}</span>
     </div>
   )
@@ -41,7 +41,7 @@ export function LogoTimeline() {
           }}
         />
         <div className="relative flex size-24 items-center justify-center rounded-xl bg-linear-to-t from-white/5 to-white/25 shadow-sm ring-1 ring-white/10 outline outline-offset-[-5px] outline-white/5 ring-inset">
-          <Mark className="h-9 fill-white" />
+          <img src="/rust-logo/single-logo.png" alt="Logo" className="h-9 fill-white" />
         </div>
       </div>
       <div className="@container absolute inset-0 grid grid-cols-1 pt-8">

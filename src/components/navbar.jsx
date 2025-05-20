@@ -8,7 +8,7 @@ import {
 import { Bars2Icon } from '@heroicons/react/24/solid'
 import { motion } from 'framer-motion'
 import { Link } from './link'
-import { Logo } from './logo'
+//import { Logo } from './logo'
 import { PlusGrid, PlusGridItem, PlusGridRow } from './plus-grid'
 
 const links = [
@@ -83,7 +83,7 @@ export function Navbar({ banner }) {
           <div className="relative flex gap-6">
             <PlusGridItem className="py-3">
               <Link href="/" title="Home">
-                <Logo className="h-9" />
+              <img src="/rust-logo/left-right.png" alt="Logo" className="h-9" />
               </Link>
             </PlusGridItem>
             {banner && (

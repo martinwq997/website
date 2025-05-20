@@ -5,7 +5,7 @@ import { Footer } from '@/components/footer'
 import { GradientBackground } from '@/components/gradient'
 import { Navbar } from '@/components/navbar'
 import { Heading, Lead, Subheading } from '@/components/text'
-import Image from 'next/image'
+//import Image from 'next/image'
 
 export const metadata = {
   title: 'Company',
@@ -43,28 +43,28 @@ function Header() {
         <div className="pt-20 lg:row-span-2 lg:-mr-16 xl:mr-auto">
           <div className="-mx-8 grid grid-cols-2 gap-4 sm:-mx-16 sm:grid-cols-4 lg:mx-0 lg:grid-cols-2 lg:gap-4 xl:gap-8">
             <div className="aspect-square overflow-hidden rounded-xl shadow-xl outline-1 -outline-offset-1 outline-black/10">
-              <Image
+              <img
                 alt=""
                 src="/company/1.jpg"
                 className="block size-full object-cover"
               />
             </div>
             <div className="-mt-8 aspect-square overflow-hidden rounded-xl shadow-xl outline-1 -outline-offset-1 outline-black/10 lg:-mt-32">
-              <Image
+              <img
                 alt=""
                 src="/company/2.jpg"
                 className="block size-full object-cover"
               />
             </div>
             <div className="aspect-square overflow-hidden rounded-xl shadow-xl outline-1 -outline-offset-1 outline-black/10">
-              <Image
+              <img
                 alt=""
                 src="/company/3.jpg"
                 className="block size-full object-cover"
               />
             </div>
             <div className="-mt-8 aspect-square overflow-hidden rounded-xl shadow-xl outline-1 -outline-offset-1 outline-black/10 lg:-mt-32">
-              <Image
+              <img
                 alt=""
                 src="/company/4.jpg"
                 className="block size-full object-cover"
@@ -110,7 +110,7 @@ function Header() {
 function Person({ name, description, img }) {
   return (
     <li className="flex items-center gap-4">
-          <Image alt="" src={img} className="size-12 rounded-full" />
+      <img alt="" src={img} className="size-12 rounded-full" />
       <div className="text-sm/6">
         <h3 className="font-medium">{name}</h3>
         <p className="text-gray-500">{description}</p>
@@ -156,7 +156,7 @@ function Team() {
         </div>
         <div className="max-lg:order-first max-lg:max-w-lg">
           <div className="aspect-3/2 overflow-hidden rounded-xl shadow-xl outline-1 -outline-offset-1 outline-black/10">
-            <Image
+            <img
               alt=""
               src="/company/5.jpg"
               className="block size-full object-cover"
@@ -242,7 +242,7 @@ function Investors() {
         className="mx-auto mt-10 grid grid-cols-1 gap-8 lg:grid-cols-2"
       >
         <li>
-          <Image
+          <img
             alt="Remington Schwartz"
             src="/investors/remington-schwartz.svg"
             className="h-14"
@@ -256,7 +256,11 @@ function Investors() {
           </p>
         </li>
         <li>
-          <Image alt="Deccel" src="/investors/deccel.svg" className="h-14" />
+          <img
+            alt="Deccel"
+            src="/investors/deccel.svg"
+            className="h-14"
+          />
           <p className="mt-6 max-w-lg text-sm/6 text-gray-500">
             Deccel has been at the forefront of innovation, investing in
             pioneering companies across various sectors, including technology,
@@ -312,7 +316,7 @@ function Investors() {
 function Testimonial() {
   return (
     <div className="relative flex aspect-square flex-col justify-end overflow-hidden rounded-3xl sm:aspect-5/4 lg:aspect-3/4">
-      <Image
+      <img
         alt=""
         src="/testimonials/veronica-winton.jpg"
         className="absolute inset-0 object-cover"
